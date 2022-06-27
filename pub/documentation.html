@@ -1,0 +1,242 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation</title>
+    <style>
+      .container {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 46px;
+        color: #168085;
+      }
+
+      h2 {
+        font-size: 1.75em;
+        margin-bottom: 10px;
+        color: #168085;
+      }
+
+      table {
+        margin-top: 30px;
+        width: 100%;
+        text-align: left;
+      }
+
+      td {
+        border-bottom: 1px solid #ddd;
+        vertical-align: top;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      td:nth-child(1) {
+        font-weight: bold;
+        color: #1abc9c;
+      }
+
+      .span-required {
+        font-size: 12px;
+        font-weight: normal;
+        color: #a9a9a9;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>API <span style="font-size: 23px">V1.0.0</span></h1>
+      </div>
+      <div class="function">
+        <h2>Getting Started</h2>
+        <p>You should include the following files for the library:</p>
+        <span
+          >&lt;<span>script</span>
+          <span>src</span>=<span>"./js_file/drawing.js"</span>&gt;</span
+        >&lt;/<span>script</span>&gt;
+        <br />
+        <span
+          >&lt;<span>script</span>
+          <span>src</span>=<span>"./css_file/drawing.css"</span>&gt;</span
+        >&lt;/<span>script</span>&gt;
+        <br />
+        <br />
+        <p>A code snippet of some basic functionality:</p>
+
+        <code>
+          data_scatter = []; for (let i = 0; i < 100;
+          i++){data_scatter.push([Math.random() * 1000, Math.random()*500])}<br />
+          const ScatterPlot = drawScatterPlot(data_scatter, x_lable =
+          "population", y_lable = "hours");<br />
+          <br />
+          const LineGraph = drawLineGraph([5000, 2000, 3000, 500, 1000], <br />
+          'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], x_lable =
+          "Day of week", y_lable = "hours");<br />
+          <br />
+          const pie = drawPieChart([5000, 2000, 3000, 500, 1000], ['country1',
+          'country2', 'country3', 'country4', 'country5']);<br />
+        </code>
+      </div>
+
+      <div class="function">
+        <h2>drawPieChart || drawBarGraph || drawHistogram</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Default</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data <span class="span-required">(required)</span></td>
+              <td>/</td>
+              <td>array of number</td>
+              <td>Data entries of Chart.</td>
+            </tr>
+            <tr>
+              <td>labels</td>
+              <td>/</td>
+              <td>array of string</td>
+              <td>Labels for data entries.</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the width of Chart.</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the height of Chart.</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>"This is our {Chart Type} Chart"</td>
+              <td>string</td>
+              <td>Determines the title of Chart.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="function">
+        <h2>drawLineGraph</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Default</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data <span class="span-required">(required)</span></td>
+              <td>/</td>
+              <td>array of number</td>
+              <td>Data entries of Chart.</td>
+            </tr>
+            <tr>
+              <td>labels</td>
+              <td>/</td>
+              <td>array of string</td>
+              <td>Labels for data entries.</td>
+            </tr>
+            <tr>
+              <td>x_label</td>
+              <td>/</td>
+              <td>string</td>
+              <td>Label for Chat's x-axis.</td>
+            </tr>
+            <tr>
+              <td>y_label</td>
+              <td>/</td>
+              <td>string</td>
+              <td>Label for Chat's y-axis.</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the width of Chart.</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the height of Chart.</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>"This is our Line Graph"</td>
+              <td>string</td>
+              <td>Determines the title of Chart.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="function">
+        <h2>drawScatterPlot</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Default</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>data <span class="span-required">(required)</span></td>
+              <td>/</td>
+              <td>2D array of number</td>
+              <td>Data entries of Chart.</td>
+            </tr>
+            <tr>
+              <td>x_label</td>
+              <td>/</td>
+              <td>string</td>
+              <td>Label for Chat's x-axis.</td>
+            </tr>
+            <tr>
+              <td>y_label</td>
+              <td>/</td>
+              <td>string</td>
+              <td>Label for Chat's y-axis.</td>
+            </tr>
+            <tr>
+              <td>width</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the width of Chart.</td>
+            </tr>
+            <tr>
+              <td>height</td>
+              <td>400</td>
+              <td>number</td>
+              <td>Determines the height of Chart.</td>
+            </tr>
+            <tr>
+              <td>title</td>
+              <td>"This is our Scatter plot"</td>
+              <td>string</td>
+              <td>Determines the title of Chart.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

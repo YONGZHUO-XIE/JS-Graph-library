@@ -1,0 +1,73 @@
+.pie-chart-content {
+    display: flex;
+    align-content: center;
+}
+
+.form-content {
+    min-width: 150px;
+    overflow-y: auto;
+    margin : 0.2rem;
+    margin-top : 0;
+    border-top :5px solid black;
+    border-bottom :1px solid lightgrey;
+    background-color : #f7f7f7;
+}
+
+.canvas {
+    padding: 0.35rem;
+    border-top: 5px solid black;
+}
+
+.rightSide{
+    margin: 0.2rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid black;
+    gap: 1rem;
+}
+
+.stats{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid lightgrey;
+    padding: 0.35rem;
+}
+
+.userInputs{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid lightgrey;
+}
+
+.userInputsTitle {
+    padding: 0.35rem;
+    border-top: 5px solid black;
+}
+
+.userInputsBtn{
+    display: block;
+}
+
+.input{
+    margin-bottom: 0.35rem;
+}
+
+.checkboxesContainer {
+    display: flex;
+    overflow-x: auto;
+    padding: 0.35rem;
+    align-items: center;
+    margin-right: 0.15rem;
+}
+
+.label{
+    width: 70%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.checkbox{
+    width: 1.25rem;
+    height: 1.25rem;
+}
